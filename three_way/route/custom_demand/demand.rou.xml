@@ -1,0 +1,38 @@
+<routes>
+    <flow id="morning_1" from="east_to_center" to="center_to_west" begin="0" end="500" vehsPerHour="350"/>
+    <flow id="morning_2" from="south_to_center" to="center_to_east" begin="0" end="500" vehsPerHour="50"/>
+    <flow id="morning_3" from="west_to_center" to="center_to_east" begin="0" end="500" vehsPerHour="50"/>
+    <flow id="morning_4" from="east_to_center" to="center_to_south" begin="0" end="500" vehsPerHour="50"/>
+    <flow id="morning_5" from="south_to_center" to="center_to_west" begin="0" end="500" vehsPerHour="350"/>
+    <flow id="morning_6" from="west_to_center" to="center_to_south" begin="0" end="500" vehsPerHour="50"/>
+
+    <!-- Midday (9:00 AM to 4:00 PM) -->
+    <flow id="midday_1" from="east_to_center" to="center_to_west" begin="500" end="1500" vehsPerHour="50"/>
+    <flow id="midday_2" from="south_to_center" to="center_to_east" begin="500" end="1500" vehsPerHour="50"/>
+    <flow id="midday_3" from="west_to_center" to="center_to_east" begin="500" end="1500" vehsPerHour="50"/>
+    <flow id="midday_4" from="east_to_center" to="center_to_south" begin="500" end="1500" vehsPerHour="50"/>
+    <flow id="midday_5" from="south_to_center" to="center_to_west" begin="500" end="1500" vehsPerHour="50"/>
+    <flow id="midday_6" from="west_to_center" to="center_to_south" begin="500" end="1500" vehsPerHour="50"/>
+
+    <!-- Evening Rush Hour (7:00 AM to 9:00 AM) -->
+    <flow id="evening_1" from="east_to_center" to="center_to_west" begin="1500" end="2000" vehsPerHour="50"/>
+    <flow id="evening_2" from="south_to_center" to="center_to_east" begin="1500" end="2000" vehsPerHour="200"/>
+    <flow id="evening_3" from="west_to_center" to="center_to_east" begin="1500" end="2000" vehsPerHour="200"/>
+    <flow id="evening_4" from="east_to_center" to="center_to_south" begin="1500" end="2000" vehsPerHour="200"/>
+    <flow id="evening_5" from="south_to_center" to="center_to_west" begin="1500" end="2000" vehsPerHour="50"/>
+    <flow id="evening_6" from="west_to_center" to="center_to_south" begin="1500" end="2000" vehsPerHour="200"/>
+    
+    
+    <!-- <flow id="midday" from="edge1" to="edge2" begin="32400" end="57600" number="500" />
+    
+    <flow id="evening_rush" from="edge1" to="edge2" begin="57600" end="64800" number="1000" />
+    
+    <flow id="night" from="edge1" to="edge2" begin="64800" end="86400" number="200" />
+    <flow id="night_overnight" from="edge1" to="edge2" begin="0" end="25200" number="200" />
+    <flow id="1" from="east_to_center" to="center_to_west" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="2" from="south_to_center" to="center_to_east" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="3" from="west_to_center" to="center_to_east" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="4" from="east_to_center" to="center_to_south" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="5" from="south_to_center" to="center_to_west" begin="0" end="3600" vehsPerHour="200"/>
+    <flow id="6" from="west_to_center" to="center_to_south" begin="0" end="3600" vehsPerHour="200"/> -->
+</routes>

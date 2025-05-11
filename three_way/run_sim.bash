@@ -1,1 +1,1 @@
-sumo-gui -c three_way.sumocfg
+sumo-gui -c ./config/three_way.sumocfg

@@ -38,30 +38,32 @@
     <location netOffset="0.00,0.00" convBoundary="-50.00,-50.00,50.00,0.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
 
     <edge id="center_to_east" from="center" to="east" priority="78">
-        <lane id="center_to_east_0" index="0" speed="13.89" length="50.00" shape="7.20,-1.60 50.00,-1.60"/>
+        <lane id="center_to_east_0" index="0" speed="5" length="50.00" shape="7.20,-1.60 50.00,-1.60"/>
     </edge>
     <edge id="center_to_south" from="center" to="south" priority="78">
-        <lane id="center_to_south_0" index="0" speed="13.89" length="50.00" shape="-1.60,-7.20 -1.60,-50.00"/>
+        <lane id="center_to_south_0" index="0" speed="5" length="50.00" shape="-1.60,-7.20 -1.60,-50.00"/>
     </edge>
     <edge id="center_to_west" from="center" to="west" priority="78">
-        <lane id="center_to_west_0" index="0" speed="13.89" length="50.00" shape="-7.20,1.60 -50.00,1.60"/>
+        <lane id="center_to_west_0" index="0" speed="5" length="50.00" shape="-7.20,1.60 -50.00,1.60"/>
     </edge>
     <edge id="east_to_center" from="east" to="center" priority="78">
-        <lane id="east_to_center_0" index="0" speed="13.89" length="50.00" shape="50.00,1.60 7.20,1.60"/>
+        <lane id="east_to_center_0" index="0" speed="5" length="50.00" shape="50.00,1.60 7.20,1.60"/>
     </edge>
     <edge id="south_to_center" from="south" to="center" priority="78">
-        <lane id="south_to_center_0" index="0" speed="13.89" length="50.00" shape="1.60,-50.00 1.60,-7.20"/>
+        <lane id="south_to_center_0" index="0" speed="5" length="50.00" shape="1.60,-50.00 1.60,-7.20"/>
     </edge>
     <edge id="west_to_center" from="west" to="center" priority="78">
-        <lane id="west_to_center_0" index="0" speed="13.89" length="50.00" shape="-50.00,-1.60 -7.20,-1.60"/>
+        <lane id="west_to_center_0" index="0" speed="5" length="50.00" shape="-50.00,-1.60 -7.20,-1.60"/>
     </edge>
 
     <junction id="center" type="traffic_light" x="0.00" y="0.00" incLanes="east_to_center_0 south_to_center_0 west_to_center_0" intLanes="" shape="7.20,3.20 7.20,-3.20 4.98,-3.64 4.20,-4.20 3.64,-4.98 3.31,-5.98 3.20,-7.20 -3.20,-7.20 -3.64,-4.98 -4.20,-4.20 -4.98,-3.64 -5.98,-3.31 -7.20,-3.20 -7.20,3.20">
         <tlLogic id="myTL" type="static" programID="0" offset="0">
-            <phase duration="30" state="GGGrrr"/>
-            <phase duration="5" state="yGGGrr"/>
-            <phase duration="30" state="rrrGGG"/>
-            <phase duration="5" state="rrryGG"/>
+            <phase duration="20" state="GGrrrr"/> 
+            <phase duration="5" state="yyrrrr"/>
+            <phase duration="20" state="rrGGrr"/>
+            <phase duration="5" state="rryyrr"/>
+            <phase duration="20" state="rrrrGG"/>
+            <phase duration="5" state="rrrryy"/>
         </tlLogic>
 
         <request index="0" response="000000" foes="001000"/>
