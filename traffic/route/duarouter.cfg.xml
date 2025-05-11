@@ -1,9 +1,9 @@
 <configuration>
     <input>
-        <net-file value="../../network/three_way.net.xml"/>
+        <net-file value="../network/three_way.net.xml"/>
         <route-files value="demand.rou.xml"/>
     </input>
     <output>
-        <output-file value="trips.rou.xml"/>
+        <output-file value="output/trips.rou.xml"/>
     </output>
 </configuration>

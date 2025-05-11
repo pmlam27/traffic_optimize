@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="../network/three_way.net.xml"/>
+        <route-files value="../route/output/trips.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="24000"/>
+    </time>
+    <gui_only>
+        <start value="true"/>
+        <delay value="100"/>
+    </gui_only>
+</configuration>

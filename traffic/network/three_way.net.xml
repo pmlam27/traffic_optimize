@@ -58,11 +58,11 @@
 
     <junction id="center" type="traffic_light" x="0.00" y="0.00" incLanes="east_to_center_0 south_to_center_0 west_to_center_0" intLanes="" shape="7.20,3.20 7.20,-3.20 4.98,-3.64 4.20,-4.20 3.64,-4.98 3.31,-5.98 3.20,-7.20 -3.20,-7.20 -3.64,-4.98 -4.20,-4.20 -4.98,-3.64 -5.98,-3.31 -7.20,-3.20 -7.20,3.20">
         <tlLogic id="myTL" type="static" programID="0" offset="0">
-            <phase duration="20" state="GGrrrr"/> 
+            <phase duration="20" minDur="5" maxDur="20" state="GGrrrr"/> 
             <phase duration="5" state="yyrrrr"/>
-            <phase duration="20" state="rrGGrr"/>
+            <phase duration="20" minDur="5" maxDur="20" state="rrGGrr"/>
             <phase duration="5" state="rryyrr"/>
-            <phase duration="20" state="rrrrGG"/>
+            <phase duration="20" minDur="5" maxDur="20" state="rrrrGG"/>
             <phase duration="5" state="rrrryy"/>
         </tlLogic>
 
