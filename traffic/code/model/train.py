@@ -21,7 +21,6 @@ print("Environment check complete.")
 # model = PPO("MlpPolicy", env, verbose=1)
 # model = PPO("MlpPolicy", env, verbose=1, learning_rate=0.0003, n_steps=2048, batch_size=64, n_epochs=10)
 model = PPO.load("output/traffic_light_optimizer_mk3.zip", env=env)
-model.n_steps = 1024
 # model.env = env
 
 # Train the model
