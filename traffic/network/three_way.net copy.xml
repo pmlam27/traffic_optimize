@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-04-23 17:39:55 by Eclipse SUMO netedit Version 1.18.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/home/pmlam/Workspaces/sumo_ws/traffic_optimize/three_way/three_way.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/pmlam/Workspaces/sumo_ws/traffic_optimize/three_way/three_way.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<net version="1.16" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-50.00,-50.00,50.00,0.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id="center_to_east" from="center" to="east" priority="78">
+        <lane id="center_to_east_0" index="0" speed="5" length="50.00" shape="7.20,-1.60 50.00,-1.60"/>
+    </edge>
+    <edge id="center_to_south" from="center" to="south" priority="78">
+        <lane id="center_to_south_0" index="0" speed="5" length="50.00" shape="-1.60,-7.20 -1.60,-50.00"/>
+    </edge>
+    <edge id="center_to_west" from="center" to="west" priority="78">
+        <lane id="center_to_west_0" index="0" speed="5" length="50.00" shape="-7.20,1.60 -50.00,1.60"/>
+    </edge>
+    <edge id="east_to_center" from="east" to="center" priority="78">
+        <lane id="east_to_center_0" index="0" speed="5" length="50.00" shape="50.00,1.60 7.20,1.60"/>
+    </edge>
+    <edge id="south_to_center" from="south" to="center" priority="78">
+        <lane id="south_to_center_0" index="0" speed="5" length="50.00" shape="1.60,-50.00 1.60,-7.20"/>
+    </edge>
+    <edge id="west_to_center" from="west" to="center" priority="78">
+        <lane id="west_to_center_0" index="0" speed="5" length="50.00" shape="-50.00,-1.60 -7.20,-1.60"/>
+    </edge>
+
+    <junction id="center" type="traffic_light" x="0.00" y="0.00" incLanes="east_to_center_0 south_to_center_0 west_to_center_0" intLanes="" shape="7.20,3.20 7.20,-3.20 4.98,-3.64 4.20,-4.20 3.64,-4.98 3.31,-5.98 3.20,-7.20 -3.20,-7.20 -3.64,-4.98 -4.20,-4.20 -4.98,-3.64 -5.98,-3.31 -7.20,-3.20 -7.20,3.20">
+        <tlLogic id="myTL" type="static" programID="0" offset="0">
+            <phase duration="20" minDur="10" maxDur="40" state="GGrrrr"/> 
+            <phase duration="5" state="yyrrrr"/>
+            <phase duration="20" minDur="10" maxDur="40" state="rrGGrr"/>
+            <phase duration="5" state="rryyrr"/>
+            <phase duration="20" minDur="10" maxDur="40" state="rrrrGG"/>
+            <phase duration="5" state="rrrryy"/>
+        </tlLogic>
+
+        <request index="0" response="000000" foes="001000"/>
+        <request index="1" response="110000" foes="111000"/>
+        <request index="2" response="100000" foes="100000"/>
+        <request index="3" response="100011" foes="100011"/>
+        <request index="4" response="000000" foes="000010"/>
+        <request index="5" response="000000" foes="001110"/>
+    </junction>
+    <junction id="east" type="dead_end" x="50.00" y="0.00" incLanes="center_to_east_0" intLanes="" shape="50.00,0.00 50.00,-3.20 50.00,0.00"/>
+    <junction id="south" type="dead_end" x="0.00" y="-50.00" incLanes="center_to_south_0" intLanes="" shape="0.00,-50.00 -3.20,-50.00 0.00,-50.00"/>
+    <junction id="west" type="dead_end" x="-50.00" y="0.00" incLanes="center_to_west_0" intLanes="" shape="-50.00,0.00 -50.00,3.20 -50.00,0.00"/>
+
+
+    <connection from="east_to_center" to="center_to_west" fromLane="0" toLane="0" tl="myTL" linkIndex="0" dir="s" state="M"/>
+    <connection from="east_to_center" to="center_to_south" fromLane="0" toLane="0" tl="myTL" linkIndex="1" dir="l" state="m"/>
+    <connection from="south_to_center" to="center_to_east" fromLane="0" toLane="0" tl="myTL" linkIndex="2" dir="r" state="m"/>
+    <connection from="south_to_center" to="center_to_west" fromLane="0" toLane="0" tl="myTL" linkIndex="3" dir="l" state="m"/>
+    <connection from="west_to_center" to="center_to_south" fromLane="0" toLane="0" tl="myTL" linkIndex="4" dir="r" state="M"/>
+    <connection from="west_to_center" to="center_to_east" fromLane="0" toLane="0" dtl="myTL" linkIndex="5" dir="s" state="M"/>
+</net>

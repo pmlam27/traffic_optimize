@@ -99,7 +99,6 @@ class TrafficLightEnv(gymnasium.Env):
         return reward
 
     def reset(self, *, seed=None, options=None):
-        """Reset the environment"""
         super().reset(seed=seed)
         traci.close()
         traci.start(self.sumo_cmd)

@@ -1,40 +1,33 @@
 <routes>
     <!-- early morning: 0 - 7 (0, 7000)-->
-    <flow id="early_morning_1" from="east_to_center" to="center_to_west" begin="0" end="7000" vehsPerHour="20"/>
-    <flow id="early_morning_2" from="south_to_center" to="center_to_east" begin="0" end="7000" vehsPerHour="20"/>
-    <flow id="early_morning_3" from="west_to_center" to="center_to_east" begin="0" end="7000" vehsPerHour="20"/>
-    <flow id="early_morning_4" from="east_to_center" to="center_to_south" begin="0" end="7000" vehsPerHour="20"/>
-    <flow id="early_morning_5" from="south_to_center" to="center_to_west" begin="0" end="7000" vehsPerHour="20"/>
-    <flow id="early_morning_6" from="west_to_center" to="center_to_south" begin="0" end="7000" vehsPerHour="20"/>
+    <flow id="early_morning_1" from="east_to_center" to="center_to_west" begin="0" end="7000" probability="0.005"/>
+    <flow id="early_morning_2" from="south_to_center" to="center_to_east" begin="0" end="7000" probability="0.005"/>
+    <flow id="early_morning_3" from="west_to_center" to="center_to_east" begin="0" end="7000" probability="0.005"/>
+    <flow id="early_morning_4" from="east_to_center" to="center_to_south" begin="0" end="7000" probability="0.005"/>
+    <flow id="early_morning_5" from="south_to_center" to="center_to_west" begin="0" end="7000" probability="0.005"/>
+    <flow id="early_morning_6" from="west_to_center" to="center_to_south" begin="0" end="7000" probability="0.005"/>
 
     <!-- base: 7 - 21 (7000, 21000)-->
-    <flow id="base_1" from="east_to_center" to="center_to_west" begin="7000" end="21000" vehsPerHour="50"/>
-    <flow id="base_2" from="south_to_center" to="center_to_east" begin="7000" end="21000" vehsPerHour="50"/>
-    <flow id="base_3" from="west_to_center" to="center_to_east" begin="7000" end="21000" vehsPerHour="50"/>
-    <flow id="base_4" from="east_to_center" to="center_to_south" begin="7000" end="21000" vehsPerHour="50"/>
-    <flow id="base_5" from="south_to_center" to="center_to_west" begin="7000" end="21000" vehsPerHour="50"/>
-    <flow id="base_6" from="west_to_center" to="center_to_south" begin="7000" end="21000" vehsPerHour="50"/>
+    <flow id="base_1" from="east_to_center" to="center_to_west" begin="7000" end="21000" probability="0.010"/>
+    <flow id="base_2" from="south_to_center" to="center_to_east" begin="7000" end="21000" probability="0.010"/>
+    <flow id="base_3" from="west_to_center" to="center_to_east" begin="7000" end="21000" probability="0.010"/>
+    <flow id="base_4" from="east_to_center" to="center_to_south" begin="7000" end="21000" probability="0.010"/>
+    <flow id="base_5" from="south_to_center" to="center_to_west" begin="7000" end="21000" probability="0.010"/>
+    <flow id="base_6" from="west_to_center" to="center_to_south" begin="7000" end="21000" probability="0.010"/>
 
-        <!-- morning rush: 7 - 9 (7000, 9000)-->
-    <flow id="morning_1" from="east_to_center" to="center_to_west" begin="7000" end="9000" vehsPerHour="200"/>
-    <flow id="morning_5" from="south_to_center" to="center_to_west" begin="7000" end="9000" vehsPerHour="200"/>
+    <!-- morning rush: 7 - 9 (7000, 9000)-->
+    <flow id="morning_1" from="east_to_center" to="center_to_west" begin="7000" end="9000" probability="0.050"/>
+    <flow id="morning_5" from="south_to_center" to="center_to_west" begin="7000" end="9000" probability="0.050"/>
 
-        <!-- evening rush 17 - 19 (17000, 19000) -->
-    <flow id="evening_2" from="south_to_center" to="center_to_east" begin="17000" end="19000" vehsPerHour="200"/>
-    <flow id="evening_3" from="west_to_center" to="center_to_east" begin="17000" end="19000" vehsPerHour="200"/>
-    <flow id="evening_4" from="east_to_center" to="center_to_south" begin="17000" end="19000" vehsPerHour="200"/>
-    <flow id="evening_6" from="west_to_center" to="center_to_south" begin="17000" end="19000" vehsPerHour="200"/>
+    <!-- evening rush 17 - 19 (17000, 19000) -->
+    <flow id="evening_3" from="west_to_center" to="center_to_east" begin="17000" end="19000" probability="0.050"/>
+    <flow id="evening_6" from="west_to_center" to="center_to_south" begin="17000" end="19000" probability="0.050"/>
 
     <!-- midnight: 21 - 24 (21000, 24000)-->
-    <flow id="midnight_1" from="east_to_center" to="center_to_west" begin="21000" end="24000" vehsPerHour="20"/>
-    <flow id="midnight_2" from="south_to_center" to="center_to_east" begin="21000" end="24000" vehsPerHour="20"/>
-    <flow id="midnight_3" from="west_to_center" to="center_to_east" begin="21000" end="24000" vehsPerHour="20"/>
-    <flow id="midnight_4" from="east_to_center" to="center_to_south" begin="21000" end="24000" vehsPerHour="20"/>
-    <flow id="midnight_5" from="south_to_center" to="center_to_west" begin="21000" end="24000" vehsPerHour="20"/>
-    <flow id="midnight_6" from="west_to_center" to="center_to_south" begin="21000" end="24000" vehsPerHour="20"/>
-
-
-
-
-
+    <flow id="midnight_1" from="east_to_center" to="center_to_west" begin="21000" end="24000" probability="0.005"/>
+    <flow id="midnight_2" from="south_to_center" to="center_to_east" begin="21000" end="24000" probability="0.005"/>
+    <flow id="midnight_3" from="west_to_center" to="center_to_east" begin="21000" end="24000" probability="0.005"/>
+    <flow id="midnight_4" from="east_to_center" to="center_to_south" begin="21000" end="24000" probability="0.005"/>
+    <flow id="midnight_5" from="south_to_center" to="center_to_west" begin="21000" end="24000" probability="0.005"/>
+    <flow id="midnight_6" from="west_to_center" to="center_to_south" begin="21000" end="24000" probability="0.005"/>
 </routes>
